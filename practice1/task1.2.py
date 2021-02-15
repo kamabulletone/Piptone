@@ -1,18 +1,16 @@
 import math
 
-def f12():
-    x = float(input("x = "))
+def f12(x):
+    res = 0
     if (x < 74):
-        return (math.tan(94*(math.pow(x,7))) + math.pow(x,3))
-    elif (x < 153 and x >=74):
-        return (math.pow(x,3) + math.pow(x,7)/99)
-    elif (x < 203 and x >=153):
-        return (54 * math.pow(x,7) + math.sin(x))
-    elif (x < 295 and x >=203):
-        return 77* math.pow((math.pow(x,5)-math.sin(x)),2) - x
+        res = (math.tan(94*(math.pow(x,7))) + math.pow(x,3))
+    elif (x < 153):
+        res = (math.pow(x,3) + math.pow(x,7)/99)
+    elif (x < 203):
+        res = (54 * math.pow(x,7) + math.sin(x))
+    elif (x < 295):
+        res = 77* math.pow((math.pow(x,5)-math.sin(x)),2) - x
     else:
-        return math.exp(math.pow(x,3) + 84*x) - math.cos(x) + 27
-
-print("{:.2e}".format(f12()))
-
-
+        res = math.exp(math.pow(x,3) + 84*x) - math.cos(x) + 27
+    return "{:.2e}".format(res)
+#print(f12(167))
