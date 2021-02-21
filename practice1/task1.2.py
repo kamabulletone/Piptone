@@ -12,5 +12,5 @@ def f12(x):
         res = 77* math.pow((math.pow(x,5)-math.sin(x)),2) - x
     else:
         res = math.exp(math.pow(x,3) + 84*x) - math.cos(x) + 27
-    return "{:.2e}".format(res)
+    return res
 #print(f12(167))

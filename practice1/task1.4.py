@@ -10,7 +10,7 @@ def count(n):
         return (math.pow(count(n - 1), 2) / 87) - abs(count(n - 1))
 
 def f14(n):
-    return "{:.2e}".format(count(n))
+    return count(n)
 
 
 print(f14(13))

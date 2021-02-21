@@ -8,7 +8,7 @@ def f13(n,m):
         for j in range(1, m + 1):
             summa += float(math.tan(j) + 94 * (i ** 7))
         sum1 += float(i + 52 * (i ** 3))
-    return "{:.2e}".format(float(42 * summa - sum1))
+    return float(42 * summa - sum1)
 
 
 
