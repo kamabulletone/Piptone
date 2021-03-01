@@ -59,7 +59,7 @@ def f22(x):
     resStr = "0b" + Eb + Bb + Db + Cb + Ab
   #  print(hex(int(resStr,2)))
     t = int(resStr,2)
-    return "{0:#0{1}x}".format(t,10)
+    return t
 
 
 
