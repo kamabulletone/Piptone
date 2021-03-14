@@ -32,4 +32,4 @@ def printBanner(text):
 
 
 
-printBanner("PIZZA Peperoni")
+printBanner("KisPython")
