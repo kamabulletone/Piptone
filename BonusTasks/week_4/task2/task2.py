@@ -24,14 +24,14 @@ plt.plot([i for i in range(24)], [lst.count(i) for i in range(24)], marker='o', 
 plt.xlabel('Время суток')
 plt.ylabel('Колличество сообщений')
 plt.xticks([i for i in range(24)])
-#plt.show()
+plt.show()
 
 #task 2 Как по дням недели распределяется активность студентов?
 
 #fig = plt.figure()
 mp = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 plt.plot(mp, [days.count(i) for i in mp], marker='o', color='black')
-#plt.show()
+plt.show()
 
 #task 3 В каких группах было отправлено больше всего сообщений?
 
@@ -45,7 +45,7 @@ mp1 = set(lst1)
 mp1 = list(mp1)
 mp1.sort()
 plt.plot(mp1, [lst1.count(i) for i in mp1], marker='o', color='black')
-#plt.show()
+plt.show()
 
 #task 4 В каких группах было получено больше всего правильных решений?
 
@@ -58,7 +58,7 @@ mp2 = set(lst2)
 mp2 = list(mp2)
 mp2.sort()
 plt.plot(mp2, [lst2.count(i) for i in mp2], marker='o', color='black')
-#plt.show()
+plt.show()
 
 #task 5 Какие задачи оказались самыми легкими, самыми сложными?
 
@@ -71,9 +71,10 @@ mp3 = set(lst3)
 mp3 = list(mp3)
 mp3.sort()
 plt.plot(mp3, [lst3.count(i) for i in mp3], marker='o', color='black')
-#plt.show()
+maxa = max([lst3.count(i) for i in mp3])
+mina = min([lst3.count(i) for i in mp3])
+x = [mina, int((mina + maxa) / 2), maxa]
+plt.yticks(x, ['easy', 'medium', 'hard'])
+plt.show()
 
-#task 6 Какие распространенные ошибки совершали студенты?
 
-lst4 = list()
-print(failed['Н5 10'])
