@@ -33,3 +33,5 @@ def printBanner(text):
 
 
 printBanner("KisPython")
+printBanner("Pizza")
+printBanner("Cringe")

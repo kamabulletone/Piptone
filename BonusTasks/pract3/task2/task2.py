@@ -77,4 +77,4 @@ x = [mina, int((mina + maxa) / 2), maxa]
 plt.yticks(x, ['easy', 'medium', 'hard'])
 plt.show()
 
-
+print(failed)
