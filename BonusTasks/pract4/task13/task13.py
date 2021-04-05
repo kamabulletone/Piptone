@@ -6,6 +6,12 @@ class Num:
         return self.num
     def ret_calc_value(self):
         return self.num
+    def ret_num(self):
+        return self.num
+    def ret(self):
+        return self.num
+    def ret_op(self):
+        return ''
 
 class Add:
     def __init__(self, num1, num2):
@@ -13,11 +19,18 @@ class Add:
         self.num2 = num2
     def ret_value(self):
         self.res = "(" + str(self.num1.ret_value()) + " + " + str(self.num2.ret_value()) + ")"
-        print(self.res)
+
         return self.res
     def ret_calc_value(self):
         self.calc_res = self.num1.ret_calc_value() + self.num2.ret_calc_value()
         return self.calc_res
+
+    def ret(self):
+        str1 = str(self.num1.ret()) + '\n' + str(self.num2.ret())
+        return str1
+    def ret_op(self):
+        str1 = 'ADD\n' + str(self.num1.ret_op()) + '\n' + str(self.num2.ret_op())
+        return str1
 
 class Mul:
     def __init__(self, num1, num2):
@@ -25,13 +38,20 @@ class Mul:
         self.num2 = num2
     def ret_value(self):
         self.res = "(" + str(self.num1.ret_value()) + " * " + str(self.num2.ret_value()) + ")"
-        print(self.res)
+
 
         return self.res
 
     def ret_calc_value(self):
         self.calc_res = self.num1.ret_calc_value() * self.num2.ret_calc_value()
         return self.calc_res
+    def ret(self):
+        str1 = str(self.num1.ret()) + '\n' + str(self.num2.ret())
+        return str1
+    def ret_op(self):
+        str1 = 'MUL\n' + str(self.num1.ret_op()) + '\n' + str(self.num2.ret_op())
+        return str1
+
 
 class PrintVisitor:
     def __init__(self):
@@ -48,9 +68,28 @@ class CalcVisitor:
         return res
 
 class StackVisitor():
+
+
     def __init__(self):
         pass
     def visit(self, exps):
+        self.res1 = exps.ret()
+        self.res2 = exps.ret_op()
+    def get_code(self):
+        nums = self.res1.split("\n")
+        nums = ["PUSH " + i for i in nums]
+       # print(nums)
+        ops = self.res2.split("\n")
+        opsC = ops.count('')
+        for i in range(opsC):
+            ops.remove('')
+        ops.reverse()
+        res = '\n'.join(nums) + "\n" + "\n".join(ops)
+        return  res
+
+
+
+
 
 
 
