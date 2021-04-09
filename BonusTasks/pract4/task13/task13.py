@@ -93,7 +93,9 @@ class StackVisitor():
 
 
 
-ast = Add(Num(7), Mul(Num(3), Num(2)))
+#ast = Add(Num(7), Mul(Num(3), Num(2)))
+ast = Add( Mul( Add(Num(3), Num(10)), Add(Num(5), Num(3))), Num(5))
+#ast = Mul(Mul(Num(3),Num(7)), Add(Num(5),Num(6)))
 pv = PrintVisitor()
 cv = CalcVisitor()
 sv = StackVisitor()
