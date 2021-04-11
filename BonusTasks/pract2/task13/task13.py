@@ -2,9 +2,10 @@
 def generate_groups():
     groups_chars = ['К', 'В', 'М', 'Н']
     groups_count = [25, 13, 2, 10]
+    res = []
     for i, j in zip(groups_chars, groups_count):
         for k in range(1,j+1):
-            print(i + str(k))
+            res.append(i + str(k))
+    return res
 
-
-generate_groups()
+print(generate_groups())
