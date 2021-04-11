@@ -5,10 +5,10 @@ ___
 
 Пример работы:
 
-![](/sources/bexp.png)
+![](sources/bexp.png)
 
 ___
 
 Результат работы программы:
 
-![](/sources/mybexp.png)
+![](sources/mybexp.png)
