@@ -12,6 +12,7 @@ def generate_groups():
 generate_groups()
 ```
 Пример вывода(с сайта):
+
 ![sovPic](sources/sov.png)
 
 Результат работы:
