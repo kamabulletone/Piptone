@@ -40,7 +40,8 @@ sv = StackVisitor()
 print(pv.visit(ast))
 print(cv.visit(ast))
 sv.visit(ast)
-print(sv.get_code()) ```
+print(sv.get_code()) 
+```
 
 Результат:
 ```python
